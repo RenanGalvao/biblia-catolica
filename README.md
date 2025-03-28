@@ -1,55 +1,53 @@
-<a href="https://thepreservedbible.com/" title="Why the King James Bible?"><img src="https://i.ibb.co/svCrDys/The-Preserved-Bible-Small.jpg" width="300" align="right"></a>
+# Bíblia Católica
 
-# kjv
+Leia a palavra de Deus a partir de seu terminal.[^1]
 
-Read the Word of God from your terminal
+## Uso
 
-## Usage
+    uso: biblia [flags] [referência...]
 
-    usage: kjv [flags] [reference...]
+    Flags
+      -D num    mostra o número de versos de contexto após os versos correspondentes
+      -A num    mostra o número de versos de contexto antes dos versos correspondentes
+      -C        mostra os versos correspondentes no contexto do capítulo
+      -e        destaca capítulos e números de versos
+                (padrão quando a saída é um TTY)
+      -p        saída para less com agrupamento de capítulos, espaçamento, recuo,
+                e quebra de linha
+                (padrão quando a saída é um TTY)
+      -l        lista de livros
+      -h        mostra essa ajuda
 
-    Flags:
-      -A num  show num verses of context after matching verses
-      -B num  show num verses of context before matching verses
-      -C      show matching verses in context of the chapter
-      -e      highlighting of chapters and verse numbers
-              (default when output is a TTY)
-      -p      output to less with chapter grouping, spacing, indentation,
-              and line wrapping
-              (default when output is a TTY)
-      -l      list books
-      -h      show help
+    Referência:
+         <Livro>
+             Livro individual
+         <Livro>:<Capítulo>
+             Capítulo individual de um livro
+         <Livro>:<Capítulo>:<Verso>[,<Verso>]...
+             Versículo(s) individual(ais) de um capítulo específico de um livro
+         <Livro>:<Capítulo>-<Capítulo>
+             Intervalo de capítulos em um livro
+         <Livro>:<Capítulo>:<Verso>-<Verso>
+             Intervalo de versos em um capítulo de livro
+         <Livro>:<Capítulo>:<Verso>-<Capítulo>:<Verso>
+             Intervalo de capítulos e versículos em um livro
 
-    Reference:
-        <Book>
-            Individual book
-        <Book>:<Chapter>
-            Individual chapter of a book
-        <Book>:<Chapter>:<Verse>[,<Verse>]...
-            Individual verse(s) of a specific chapter of a book
-        <Book>:<Chapter>-<Chapter>
-            Range of chapters in a book
-        <Book>:<Chapter>:<Verse>-<Verse>
-            Range of verses in a book chapter
-        <Book>:<Chapter>:<Verse>-<Chapter>:<Verse>
-            Range of chapters and verses in a book
-
-        /<Search>
-            All verses that match a pattern
-        <Book>/<Search>
-            All verses in a book that match a pattern
-        <Book>:<Chapter>/<Search>
-            All verses in a chapter of a book that match a pattern
+         /<Pesquisa>
+             Todos os versos que correspondem ao padrão
+         <Livro>/<Pesquisa>
+             Todos os versos de um livro que correspondem ao padrão
+         <Livro>:<Capítulo>/<Pesquisa>
+             Todos os versos em um capítulo de um livro que correspondem ao padrão
 
 ## Build
 
-kjv can be built by cloning the repository and then running make:
-
-    git clone https://github.com/layeh/kjv.git
-    cd kjv
+    git clone https://github.com/RenanGalvao/biblia-catolica.git
+    cd biblia-catolica
     make
-    sudo make install
+    sudo make install (opcional)
 
 ## License
 
-Public domain
+[Public domain](LICENSE)
+
+[^1]: Modificado a partir do projeto [kvj](https://github.com/layeh/kjv).

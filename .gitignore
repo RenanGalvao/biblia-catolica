@@ -1,3 +1,7 @@
-/kjv
+/biblia
 *.o
-/data/kjv_data.c
+/data/data.c
+# sourcetrail
+/Biblia*
+.cache
+compile_commands.json
